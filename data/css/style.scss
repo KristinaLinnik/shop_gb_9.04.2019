@@ -1,6 +1,7 @@
 @import "_checkout";
 @import "_vars";
 @import "_keyframes";
+@import "_single-page";
 
 * {
   margin: 0;
@@ -13,12 +14,18 @@ body, html {
   height: 100%;
   font-family: 'Lato', sans-serif;
 }
-.page-wrap{
+
+.hide {
+  display: none;
+}
+
+.page-wrap {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
-.to-bottom-footer{
+
+.to-bottom-footer {
   flex-grow: 1;
   min-height: 100%;
 }
@@ -123,12 +130,13 @@ a:hover {
 .head-card-wrap {
   position: relative;
 }
-.card-wrap-btn{
+
+.card-wrap-btn {
   display: block;
   width: 30px;
   height: 30px;
   transition: transform 1s 1s;
-  &:hover{
+  &:hover {
     transform: rotate(360deg);
   }
 }
@@ -138,7 +146,7 @@ a:hover {
 }
 
 .head-card-wrap .card-drop {
-  display: none;
+  display: block;
   width: 250px;
   top: 32px;
 }
@@ -164,6 +172,8 @@ a:hover {
     width: 70px;
     height: 84px;
     margin-right: 14px;
+    background-position: center;
+    background-size: cover;
   }
   .head-drop-desc {
     font-family: 'Lato Bold', sans-serif;
@@ -171,15 +181,18 @@ a:hover {
     text-transform: uppercase;
     font-weight: bold;
   }
-  .drop-btn-delete i {
+  .drop-btn-delete {
     display: block;
-    width: 20px;
-    height: 20px;
-    color: #656565;
-    transition: transform 0.3s;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 
+    i {
 
+      color: #656565;
+      transition: transform 0.3s;
 
+    }
   }
   .drop-btn-delete i:hover {
     color: #ef5b70;
@@ -217,7 +230,7 @@ a:hover {
     border-color: #ececec;
     transition: color 0.5s 0.5s;
 
-    &:hover{
+    &:hover {
       color: $pink;
       border-color: $pink;
 
@@ -228,7 +241,7 @@ a:hover {
     color: $pink;
     border-color: $pink;
     transition: all 0.3s 0.3s;
-    &:hover{
+    &:hover {
       color: #4a4a4a;
       border-color: #ececec;
 
@@ -374,7 +387,7 @@ a:hover {
   padding: 0 12px;
   line-height: 38px;
   margin-left: 26px;
-  transition:  0.4s 0.4s;
+  transition: 0.4s 0.4s;
   i {
     line-height: 34px;
     vertical-align: top;
@@ -539,6 +552,7 @@ a:hover {
 .brand-banner-img {
   width: 100%;
   height: 100vh;
+  max-height: 610px;
   background-image: url(../img/main_bg.jpg);
   background-position-y: bottom;
   background-repeat: no-repeat;
@@ -649,7 +663,7 @@ a:hover {
 
 .shop-wrap {
   text-align: center;
-  margin-bottom: 85px;
+  //margin-bottom: 85px;
   padding-bottom: 40px;
 }
 
@@ -741,7 +755,7 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase;
   transition: color 0.3s 0.3s;
-  &:hover{
+  &:hover {
     color: $pink;
   }
 }
@@ -762,7 +776,7 @@ a:hover {
   height: 40px;
   line-height: 40px;
   transition: opacity 0.3s 0.3s;
-  &:hover{
+  &:hover {
     opacity: 0.5;
     color: #fff;
 
@@ -772,6 +786,7 @@ a:hover {
     margin-right: 10px;
   }
 }
+
 .black-section-wrap {
   display: flex;
   width: 100%;
@@ -878,11 +893,12 @@ a:hover {
 }
 
 .subscribe {
-  max-width: 1609px;
-  margin: 0 auto;
-  background: url('../img/bg_block.jpg') no-repeat;
+  margin: 60px auto;
+  width: 100%;
+  background: url(../img/bg_block.jpg) no-repeat;
+  background-size: cover;
   height: 70vh;
-  margin-bottom: 60px;
+  max-height: 500px;
 
 }
 
@@ -892,6 +908,7 @@ a:hover {
   justify-content: space-around;
   width: 100%;
   height: 70vh;
+  max-height: 400px;
 
 }
 
@@ -974,7 +991,7 @@ a:hover {
   vertical-align: middle;
   line-height: 46px;
   transition: opacity 0.3s 0.3s;
-  &:hover{
+  &:hover {
     opacity: 0.6;
     color: #ffffff;
   }
@@ -1532,7 +1549,7 @@ a:hover {
     min-height: 122px;
     border-bottom: 1px solid #eaeaea;
     display: flex;
-    .unite-price, .shipping, .quantity, .subtotal, .action {
+    .unite-price, .shipping, .quantity-head, .subtotal, .action {
       width: 150px;
       min-height: 122px;
       display: flex;
@@ -1613,7 +1630,7 @@ a:hover {
     display: flex;
     padding: 0 0 20px 0;
     transition: background-color 0.3s 0.3s;
-    &:hover{
+    &:hover {
       background-color: #f8f7fb;
     }
 
@@ -1626,6 +1643,8 @@ a:hover {
   .product-details-img {
     width: 100px;
     height: 115px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .product-name {
     padding-left: 20px;
@@ -1633,6 +1652,9 @@ a:hover {
     line-height: 20px;
     color: #575757;
     font-weight: 400;
+    .size, .color {
+      display: block;
+    }
     h3 {
       a {
         color: #222222;
@@ -1730,7 +1752,6 @@ a:hover {
     text-align: center;
     border: 1px solid #b1b1b1;
     transition: all 0.3s 0.3s;
-
 
   }
   .get-guote-btn:hover,
@@ -1949,6 +1970,7 @@ a:hover {
 .shop-wrap-single {
   margin-bottom: 0;
 }
+
 @import "_adaptive";
 @import "_media";
 

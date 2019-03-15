@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="data/css/style.css">
     <script type="text/javascript" src="data/js/jquery.js"></script>
     <script type="text/javascript" src="data/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="data/js/main.js"></script>
+
 </head>
 <body>
 <div class="wrapper-index-page page-wrap">
@@ -66,52 +66,37 @@
                             </div>
                         </form>
                     </div>
+                    <div class="drop card-drop" id="template-drop-cart" style="display: none">
+                        <div class="drop-flex-card">
+                            <div class="drop-img"
+                                 style="background: url('data/img/drop-card1.jpg')no-repeat,center center; background-size: contain"></div>
+                            <div class="drop-desc">
+                                <h5 class="head-drop-desc">Rebox Zane</h5>
+                                <form id="user-rating-form1">
+                                    <span class="user-rating">
+                                        <input type="radio" name="rating" value="5"><span class="star"></span>
+                                        <input type="radio" name="rating" value="4"><span class="star"></span>
+                                        <input type="radio" name="rating" value="3"><span class="star"></span>
+                                        <input type="radio" name="rating" value="2"><span class="star"></span>
+                                        <input type="radio" name="rating" value="1"><span class="star"></span>
+                                    </span>
+                                </form>
+                                <p class="sum">
+                                    <span class="sum-count">1x</span>
+                                    <span class="sum-dollar">$250</span>
+                                </p>
+                            </div>
+                            <div class="drop-btn-delete delete-good-btn" href="#"><i class="fas fa-times-circle"></i></div>
+                        </div>
+                    </div>
                     <div class="right-head">
                         <div class="head-card-wrap">
                             <a href="shopping-card.html" class="card-wrap-btn"><img src="data/img/card.svg" alt="card"></a>
                             <div class="drop card-drop">
-                                <div class="drop-flex-card">
-                                    <div class="drop-img"
-                                         style="background: url('data/img/drop-card1.jpg')no-repeat,center center; background-size: contain"></div>
-                                    <div class="drop-desc">
-                                        <h5 class="head-drop-desc">Rebox Zane</h5>
-                                        <form id="user-rating-form1">
-                                    <span class="user-rating">
-                                        <input type="radio" name="rating" value="5"><span class="star"></span>
-                                        <input type="radio" name="rating" value="4"><span class="star"></span>
-                                        <input type="radio" name="rating" value="3"><span class="star"></span>
-                                        <input type="radio" name="rating" value="2"><span class="star"></span>
-                                        <input type="radio" name="rating" value="1"><span class="star"></span>
-                                    </span>
-                                        </form>
-                                        <p class="sum">
-                                            <span class="sum-count">1x</span>
-                                            <span class="sum-dollar">$250</span>
-                                        </p>
-                                    </div>
-                                    <a class="drop-btn-delete" href="#"><i class="fas fa-times-circle"></i></a>
-                                </div>
-                                <div class="drop-flex-card">
-                                    <div class="drop-img"
-                                         style="background: url('data/img/drop-card2.jpg')no-repeat,center center; background-size: contain"></div>
-                                    <div class="drop-desc">
-                                        <h5 class="head-drop-desc">Rebox Zane</h5>
-                                        <form id="user-rating-form2">
-                                    <span class="user-rating">
-                                        <input type="radio" name="rating" value="5"><span class="star"></span>
-                                        <input type="radio" name="rating" value="4"><span class="star"></span>
-                                        <input type="radio" name="rating" value="3"><span class="star"></span>
-                                        <input type="radio" name="rating" value="2"><span class="star"></span>
-                                        <input type="radio" name="rating" value="1"><span class="star"></span>
-                                    </span>
-                                        </form>
-                                        <p class="sum">
-                                            <span class="sum-count">1x</span>
-                                            <span class="sum-dollar">$250</span>
-                                        </p>
-                                    </div>
-                                    <a class="drop-btn-delete" href="#"><i class="fas fa-times-circle"></i></a>
-                                </div>
+                                <div class="drop-wrap-cart" id="parent-drop-cart"></div>
+
+
+
                                 <p class="total-sum-wrap">
                                     <span class="total-desc">Total</span>
                                     <span class="total-sum">$500</span>
@@ -470,76 +455,329 @@
             <section class="shop-wrap">
                 <h2 class="shop-head">Fetured Items</h2>
                 <p class="head-desc">Shop for items based on what we featured in this week</p>
-                <ul class="shop-item-wrap">
+                <ul class="shop-item-wrap" id='catalog-wrap-template' style="display: none;">
                     <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_1.jpg');">
+                        <a class="shop-item-link" href="single-page.html">
                         </a>
                         <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
+                        <a href="single-page.html" class="item-brand"></a>
+                        <p class="item-price pink"></p>
                     </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="#" style="background: url('data/img/product_2.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_3.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_4.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_5.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_6.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_7.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
-                    <li class="shop-item">
-                        <a class="shop-item-link" href="single-page.html"
-                           style="background: url('data/img/product_8.jpg');">
-                        </a>
-                        <a href="#" class="add-to-card">Add to card</a>
-                        <a href="single-page.html" class="item-brand">Mango People T-shirt</a>
-                        <p class="item-price pink">$52.00</p>
-                    </li>
+                </ul>
+
+                <ul class="shop-item-wrap" id='catalog-wrap'>
+
+                    <!--<li class="shop-item" id="template_catalog" style="display: none;">-->
+                    <!--<a class="shop-item-link" href="single-page.html">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand"></a>-->
+                    <!--<p class="item-price pink"></p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="#" style="background: url('data/img/product_2.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="single-page.html"-->
+                    <!--style="background: url('data/img/product_3.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="single-page.html"-->
+                    <!--style="background: url('data/img/product_4.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="single-page.html"-->
+                    <!--style="background: url('data/img/product_5.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="single-page.html"-->
+                    <!--style="background: url('data/img/product_6.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="single-page.html"-->
+                    <!--style="background: url('data/img/product_7.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
+                    <!--<li class="shop-item">-->
+                    <!--<a class="shop-item-link" href="single-page.html"-->
+                    <!--style="background: url('data/img/product_8.jpg');">-->
+                    <!--</a>-->
+                    <!--<a href="#" class="add-to-card">Add to card</a>-->
+                    <!--<a href="single-page.html" class="item-brand">Mango People T-shirt</a>-->
+                    <!--<p class="item-price pink">$52.00</p>-->
+                    <!--</li>-->
                 </ul>
                 <a href="product.html" class="see-more-btn same-style">
                     <span>Browse All Product</span>
                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                 </a>
             </section>
+
+            <div class="product-table-wrap">
+                <div class="container">
+                    <div class="product-table-head">
+                        <div class="product-details">
+                            <h2>Product Details</h2>
+                        </div>
+                        <div class="unite-price">
+                            <h2>unite Price</h2>
+                        </div>
+                        <div class="quantity-head">
+                            <h2>Quantity</h2>
+                        </div>
+                        <div class="shipping">
+                            <h2>shipping </h2>
+                        </div>
+                        <div class="subtotal">
+                            <h2>Subtotal</h2>
+                        </div>
+                        <div class="action">
+                            <h2>ACTION</h2>
+                        </div>
+
+                    </div>
+                    <div class="rows-wrap" id="template-cart-catalog" style="display: none;">
+                        <div class="product-row">
+                            <div class="product-details">
+                                <div class="product-details-wrap">
+                                    <div class="product-details-img"
+                                         style="background: url('data/img/tov-1.png') no-repeat center center; background-size: contain"></div>
+                                    <div class="product-name">
+                                        <h6 class="good-title"><a class='link-to-catalog' href="single-page.html">Mango
+                                            People T-shirt</a></h6>
+                                        <span class="color">Color:<span class="color-result"></span></span><br>
+                                        <span class="size">Size:<span class="size-result"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="unite-price">
+                                $150
+                            </div>
+                            <div class="quantity" id="quantity">
+                                <input type="number" class="quantity-box" placeholder="2">
+                            </div>
+                            <div class="shipping">
+                                FREE
+                            </div>
+                            <div class="subtotal">
+                                $300
+                            </div>
+                            <div class="delete-good-btn action">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                        <!--<div class="product-details-wrap">-->
+                        <!--<div class="product-details-img"-->
+                        <!--style="background: url('data/img/tov-2.png') no-repeat center center; background-size: contain"></div>-->
+                        <!--<div class="product-name">-->
+                        <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                        <!--Color:<span>Red</span><br>-->
+                        <!--Size:<span>Xll</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                        <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                        <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                        <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                        <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                        <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                        <!--<div class="product-details-wrap">-->
+                        <!--<div class="product-details-img"-->
+                        <!--style="background: url('data/img/tov-3.png') no-repeat center center; background-size: contain"></div>-->
+                        <!--<div class="product-name">-->
+                        <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                        <!--Color:<span>Red</span><br>-->
+                        <!--Size:<span>Xll</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                        <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                        <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                        <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                        <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                        <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+
+                    <div class="rows-wrap" id="parentOfCart">
+                        <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                        <!--<div class="product-details-wrap">-->
+                        <!--<div class="product-details-img"-->
+                        <!--style="background: url('data/img/tov-1.png') no-repeat center center; background-size: contain"></div>-->
+                        <!--<div class="product-name">-->
+                        <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                        <!--<span class="color">Color:</span><span>Red</span><br>-->
+                        <!--<span class="size">Size:</span><span>Xll</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                        <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                        <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                        <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                        <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                        <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                        <!--<div class="product-details-wrap">-->
+                        <!--<div class="product-details-img"-->
+                        <!--style="background: url('data/img/tov-2.png') no-repeat center center; background-size: contain"></div>-->
+                        <!--<div class="product-name">-->
+                        <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                        <!--Color:<span>Red</span><br>-->
+                        <!--Size:<span>Xll</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                        <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                        <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                        <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                        <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                        <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                        <!--<div class="product-details-wrap">-->
+                        <!--<div class="product-details-img"-->
+                        <!--style="background: url('data/img/tov-3.png') no-repeat center center; background-size: contain"></div>-->
+                        <!--<div class="product-name">-->
+                        <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                        <!--Color:<span>Red</span><br>-->
+                        <!--Size:<span>Xll</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                        <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                        <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                        <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                        <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                        <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+
+                    <div class="product-btns-wrap">
+                        <a class="product-btn" href="#">cLEAR SHOPPING CART</a>
+                        <a class="product-btn" href="#">cONTINUE sHOPPING</a>
+                    </div>
+                    <div class="product-delivery">
+                        <div class="shipping-adress same-block">
+                            <h3 class="delivery-head">Shipping Adress</h3>
+                            <div class="choose-city">
+                                <form action="#" class="shipping-form">
+                                    <select name="city" id="city-select">
+                                        <option disabled>Choose city</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Moscow">Moscow</option>
+                                        <option value="Astrakhan">Astrakhan</option>
+                                    </select>
+                                    <input type="text" placeholder="State">
+                                    <input type="number" placeholder="Postcode / Zip">
+                                    <a href="#" class="get-guote-btn">
+                                        get a quote
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="coupon-discount same-block">
+                            <h3 class="delivery-head">coupon discount</h3>
+                            <p>Enter your coupon code if you have one</p>
+                            <input type="text" placeholder="State">
+                            <a href="#" class="apply-btn">Apply coupon</a>
+                        </div>
+                        <div class="ground-total-wrap same-block">
+                            <div class="checkout">
+                                <div class="ground-total">
+                                    <p class="sub-total">Sub total<span id="all-total">0</span></p>
+                                    <h3 class="ground-total-head" id="grand">GRAND TOTAL<span class="total-sum">0</span>
+                                    </h3>
+                                </div>
+                                <a href="#" class="proceed-btn">proceed to checkout</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
             <div class="black-section-wrap">
                 <div class="black-section-left">
                     <div class="heading-wrap">
@@ -704,6 +942,9 @@
 
     </footer>
 </div>
+
+<script type="text/javascript" src="data/js/main.js"></script>
+
 
 </body>
 </html>

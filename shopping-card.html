@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="data/css/style.css">
     <script type="text/javascript" src="data/js/jquery.js"></script>
     <script type="text/javascript" src="data/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="data/js/main.js"></script>
 </head>
 <body>
 <div class="wrapper-shopping-card-page page-wrap">
@@ -450,7 +449,7 @@
                     <div class="unite-price">
                         <h2>unite Price</h2>
                     </div>
-                    <div class="quantity">
+                    <div class="quantity-head">
                         <h2>Quantity</h2>
                     </div>
                     <div class="shipping">
@@ -464,90 +463,93 @@
                     </div>
 
                 </div>
-                <div class="product-row">
-                    <div class="product-details">
-                        <div class="product-details-wrap">
-                            <div class="product-details-img"
-                                 style="background: url('data/img/tov-1.png') no-repeat center center; background-size: contain"></div>
-                            <div class="product-name">
-                                <h3><a href="single-page.html">Mango People T-shirt</a></h3>
-                                Color:<span>Red</span><br>
-                                Size:<span>Xll</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="unite-price">
-                        $150
-                    </div>
-                    <div class="quantity">
-                        <input type="number" class="quantity-box" placeholder="2">
-                    </div>
-                    <div class="shipping">
-                        FREE
-                    </div>
-                    <div class="subtotal">
-                        $300
-                    </div>
-                    <div class="action">
-                        <i class="fas fa-times-circle"></i>
-                    </div>
+                <div class="rows-wrap" id = 'cart-generate'>
+                    <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                            <!--<div class="product-details-wrap">-->
+                                <!--<div class="product-details-img"-->
+                                     <!--style="background: url('data/img/tov-1.png') no-repeat center center; background-size: contain"></div>-->
+                                <!--<div class="product-name">-->
+                                    <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                                    <!--<span class="color">Color:</span><span>Red</span><br>-->
+                                    <!--<span class="size">Size:</span><span>Xll</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                            <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                            <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                            <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                            <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                            <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                            <!--<div class="product-details-wrap">-->
+                                <!--<div class="product-details-img"-->
+                                     <!--style="background: url('data/img/tov-2.png') no-repeat center center; background-size: contain"></div>-->
+                                <!--<div class="product-name">-->
+                                    <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                                    <!--Color:<span>Red</span><br>-->
+                                    <!--Size:<span>Xll</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                            <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                            <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                            <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                            <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                            <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="product-row">-->
+                        <!--<div class="product-details">-->
+                            <!--<div class="product-details-wrap">-->
+                                <!--<div class="product-details-img"-->
+                                     <!--style="background: url('data/img/tov-3.png') no-repeat center center; background-size: contain"></div>-->
+                                <!--<div class="product-name">-->
+                                    <!--<h3><a href="single-page.html">Mango People T-shirt</a></h3>-->
+                                    <!--Color:<span>Red</span><br>-->
+                                    <!--Size:<span>Xll</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="unite-price">-->
+                            <!--$150-->
+                        <!--</div>-->
+                        <!--<div class="quantity">-->
+                            <!--<input type="number" class="quantity-box" placeholder="2">-->
+                        <!--</div>-->
+                        <!--<div class="shipping">-->
+                            <!--FREE-->
+                        <!--</div>-->
+                        <!--<div class="subtotal">-->
+                            <!--$300-->
+                        <!--</div>-->
+                        <!--<div class="action">-->
+                            <!--<i class="fas fa-times-circle"></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
-                <div class="product-row">
-                    <div class="product-details">
-                        <div class="product-details-wrap">
-                            <div class="product-details-img"
-                                 style="background: url('data/img/tov-2.png') no-repeat center center; background-size: contain"></div>
-                            <div class="product-name">
-                                <h3><a href="single-page.html">Mango People T-shirt</a></h3>
-                                Color:<span>Red</span><br>
-                                Size:<span>Xll</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="unite-price">
-                        $150
-                    </div>
-                    <div class="quantity">
-                        <input type="number" class="quantity-box" placeholder="2">
-                    </div>
-                    <div class="shipping">
-                        FREE
-                    </div>
-                    <div class="subtotal">
-                        $300
-                    </div>
-                    <div class="action">
-                        <i class="fas fa-times-circle"></i>
-                    </div>
-                </div>
-                <div class="product-row">
-                    <div class="product-details">
-                        <div class="product-details-wrap">
-                            <div class="product-details-img"
-                                 style="background: url('data/img/tov-3.png') no-repeat center center; background-size: contain"></div>
-                            <div class="product-name">
-                                <h3><a href="single-page.html">Mango People T-shirt</a></h3>
-                                Color:<span>Red</span><br>
-                                Size:<span>Xll</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="unite-price">
-                        $150
-                    </div>
-                    <div class="quantity">
-                        <input type="number" class="quantity-box" placeholder="2">
-                    </div>
-                    <div class="shipping">
-                        FREE
-                    </div>
-                    <div class="subtotal">
-                        $300
-                    </div>
-                    <div class="action">
-                        <i class="fas fa-times-circle"></i>
-                    </div>
-                </div>
+
                 <div class="product-btns-wrap">
                     <a class="product-btn" href="#">cLEAR SHOPPING CART</a>
                     <a class="product-btn" href="#">cONTINUE sHOPPING</a>
@@ -711,5 +713,7 @@
 
     </footer>
 </div>
+<script type="text/javascript" src="data/js/main.js"></script>
+
 </body>
 </html>
