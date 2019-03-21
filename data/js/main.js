@@ -1,8 +1,4 @@
 ﻿'use strict';
-
-
-
-
 // $(document).ready(function () {
 //
 //     $('.collapse').collapse()
@@ -12,7 +8,7 @@
 //
 // });
 
-var catalog = [
+let catalog = [
     {
         title: 'MANGO PEOPLE T-SHIRT',
         color: 'red',
@@ -41,34 +37,34 @@ var catalog = [
         quantity: 1
     }
 ];
-var goodsInDrop = document.querySelector('.drop-wrap-cart');
+let goodsInDrop = document.querySelector('.drop-wrap-cart');
 
-var cart = [];
-var $cart = document.querySelector('#parentOfCart');
-var $catalog = document.querySelector('#catalog-wrap');
+let cart = [];
+let $cart = document.querySelector('#parentOfCart');
+let $catalog = document.querySelector('#catalog-wrap');
 
-var allTotal = document.querySelector('#all-total');
+let allTotal = document.querySelector('#all-total');
 allTotal.textContent = 'Empty';
-var totalSum = document.querySelectorAll('.total-sum');
-for (var j = 0; j < totalSum.length; j++) {
+let totalSum = document.querySelectorAll('.total-sum');
+for (let j = 0; j < totalSum.length; j++) {
     totalSum[j].textContent = 'Empty';
 }
 
 $catalog.addEventListener('click', handleBuyClick);
 
 function sumOfCart() {
-    var sum = 0;
+    let sum = 0;
     if (cart.length === 0) {
         allTotal.textContent = 'Empty';
-        for (var k = 0; k < totalSum.length; k++) {
+        for (let k = 0; k < totalSum.length; k++) {
             totalSum[k].textContent = 'Empty';
         }
     } else {
 
-        for (var i = 0; i < cart.length; i++) {
+        for (let i = 0; i < cart.length; i++) {
             sum = sum + cart[i].price * cart[i].quantity;
             document.querySelector('#all-total').textContent = '$ ' + sum;
-            for (var j = 0; j < totalSum.length; j++) {
+            for (let j = 0; j < totalSum.length; j++) {
                 totalSum[j].textContent = '$ ' + (sum - (sum * 0.1));
             }
         }
@@ -76,8 +72,8 @@ function sumOfCart() {
 }
 
 function getProductByName(name) {
-    var product = null;
-    for (var i = 0; i < catalog.length; i++) {
+    let product = null;
+    for (let i = 0; i < catalog.length; i++) {
         if (catalog[i].title === name) {
             product = catalog[i];
         }
@@ -87,24 +83,26 @@ function getProductByName(name) {
 }
 
 function returnDeleteBtn(cart) {
-    var deleteBtns = document.querySelectorAll('.delete-good-btn');
-    // console.log(deleteBtns);
-    for (var i = 0; i < deleteBtns.length; i++) {
-        var deleteBtn = deleteBtns[i];
+    let deleteBtns = document.querySelectorAll('.delete-good-btn');
+    for (let i = 0; i < deleteBtns.length; i++) {
+        let deleteBtn = deleteBtns[i];
         deleteBtn.addEventListener('click', function (event) {
             event.preventDefault();
-            var deleteElement = event.target.parentElement.parentNode;
+            let deleteElement = event.target.parentElement.parentNode;
             console.log(deleteElement)
-            if (deleteElement.classList.contains('drop-wrap-cart')) {
-                // console.log(deleteElement)
-                nameofDeleteElement = deleteElement.querySelector('.head-drop-desc').textContent;
-                indexOfDeleted = getProductIndex(nameofDeleteElement);
+            if (deleteElement.classList.contains('drop-flex-card')) {
+                console.log(deleteElement)
+                let nameofDeleteElement = deleteElement.querySelector('.head-drop-desc').textContent;
+                console.log(nameofDeleteElement);
+                let indexOfDeleted = getProductIndex(nameofDeleteElement);
                 cart.splice(indexOfDeleted, 1);
                 this.parentElement.remove();
             } else if (deleteElement.classList.contains('product-row')) {
                 // console.log(deleteElement)
-                var nameofDeleteElement = deleteElement.querySelector('.good-title').textContent;
-                var indexOfDeleted = getProductIndex(nameofDeleteElement);
+                let nameofDeleteElement = deleteElement.querySelector('.good-title').textContent;
+                console.log(nameofDeleteElement);
+
+                let indexOfDeleted = getProductIndex(nameofDeleteElement);
                 cart.splice(indexOfDeleted, 1);
                 this.parentElement.remove();
             }
@@ -122,8 +120,8 @@ function returnDeleteBtn(cart) {
 }
 
 function getProductIndex(name) {
-    var idx = -1;
-    for (var i = 0; i < cart.length; i++) {
+    let idx = -1;
+    for (let i = 0; i < cart.length; i++) {
         if (cart[i].title === name) {
             idx = i;
         }
@@ -135,11 +133,11 @@ function getProductIndex(name) {
 function handleBuyClick(event) {
     event.preventDefault();
     if (event.target.className === 'add-to-card') {
-        var $product = event.target.parentElement;
-        var name = $product.querySelector('.item-brand').textContent;
-        var price = +$product.querySelector('.item-price').textContent;
-        var product = getProductByName(name);
-        var idx = getProductIndex(name);
+        let $product = event.target.parentElement;
+        let name = $product.querySelector('.item-brand').textContent;
+        let price = +$product.querySelector('.item-price').textContent;
+        let product = getProductByName(name);
+        let idx = getProductIndex(name);
         if (idx === -1) {
             // товара в корзине еще нет
             cart.push(product);
@@ -151,7 +149,9 @@ function handleBuyClick(event) {
         buildCart(cart);
 
         goodsInDrop.innerHTML = '';
-        buildDropCart(cart)
+        buildDropCart(cart);
+
+
 
 
         // console.log(cart);
@@ -161,9 +161,9 @@ function handleBuyClick(event) {
 }
 
 function buildCart(cart) {
-    for (var i = 0; i < cart.length; i++) {
-        var goodInCart = cart[i];
-        var $templateCart = document.querySelector('#template-cart-catalog').children[0].cloneNode(true);
+    for (let i = 0; i < cart.length; i++) {
+        let goodInCart = cart[i];
+        let $templateCart = document.querySelector('#template-cart-catalog').children[0].cloneNode(true);
         $templateCart.querySelector('.product-details-img').style = 'background-image: url(' + goodInCart.url + ')';
         $templateCart.querySelector('.color-result').textContent = goodInCart.color;
         $templateCart.querySelector('.size-result').textContent = goodInCart.size;
@@ -179,20 +179,19 @@ function buildCart(cart) {
     }
 
 
-    returnDeleteBtn(cart);
 
 
 }
 
 function buildCatalog(products) {
-    for (var i = 0; i < products.length; i++) {
+    for (let i = 0; i < products.length; i++) {
         // console.log(products.length);
-        var product = products[i];
+        let product = products[i];
         // console.log(product);
-        var $template = document.querySelector('#catalog-wrap-template').children[0].cloneNode(true);
+        let $template = document.querySelector('#catalog-wrap-template').children[0].cloneNode(true);
         // console.log($template);
         $template.querySelector('.shop-item-link').style = 'background-image: url(' + product.url + ')';
-        var btnAddToCart = $template.querySelector('.add-to-card');
+        let btnAddToCart = $template.querySelector('.add-to-card');
         btnAddToCart.textContent = 'Add to cart';
         btnAddToCart.href = '#';
         btnAddToCart.id = i;
@@ -209,16 +208,16 @@ function buildCatalog(products) {
 
 buildCatalog(catalog);
 
-var parentDrop = document.querySelector('#parent-drop-cart');
+let parentDrop = document.querySelector('#parent-drop-cart');
 
 function buildDropCart(cart) {
 
-    for (var i = 0; i < cart.length; i++) {
-        var goodInCart = cart[i];
+    for (let i = 0; i < cart.length; i++) {
+        let goodInCart = cart[i];
         // console.log(goodsInDrop);
         if (i < 2) {
 
-            var $cartDropTemplate = document.querySelector('#template-drop-cart').children[0].cloneNode(true);
+            let $cartDropTemplate = document.querySelector('#template-drop-cart').children[0].cloneNode(true);
             $cartDropTemplate.querySelector('.drop-img').style = 'background-image: url(' + goodInCart.url + ')';
             $cartDropTemplate.querySelector('.head-drop-desc').textContent = goodInCart.title;
             $cartDropTemplate.querySelector('.sum-count').textContent = goodInCart.quantity + ' x';
@@ -230,6 +229,8 @@ function buildDropCart(cart) {
 
         }
     }
+    returnDeleteBtn(cart);
+
 
 }
 
