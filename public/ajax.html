@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ajax - Asynchronus Javascript and XML</title>
+    <base href="/" />
+</head>
+<body>
+<button id="button">Send</button>
+<ul id="phones"></ul>
+<script>
+    const $button = document.querySelector('#button');
+    const $phones = document.querySelector('#phones');
+
+    function sendRequest(url, callback) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url); // настройка запроса
+        xhr.send();
+
+        xhr.onreadystatechange = () => {
+            if(xhr.readyState === XMLHttpRequest.DONE) {
+                callback(JSON.parse(xhr.responseText));
+                console.log(JSON.parse(xhr.responseText))
+            }
+        }
+    }
+
+    $button.addEventListener('click', () => {
+        sendRequest('/data/js/products.json', (items) => {
+            $phones.innerHTML = items.map((item) => `<li>${item.title}: ${item.price}</li>`).join('');
+        });
+    });
+</script>
+</body>
+
+</html>
