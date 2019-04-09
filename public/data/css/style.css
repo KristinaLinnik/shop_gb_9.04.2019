@@ -1787,9 +1787,21 @@ a:hover {
   padding-bottom: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  cursor: pointer; }
   .product-table-wrap .action i {
-    cursor: pointer; }
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .product-table-wrap .action:hover i {
   color: #ef5b70;
