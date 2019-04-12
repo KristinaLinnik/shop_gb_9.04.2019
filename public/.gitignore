@@ -1,7 +1,6 @@
 node_modules
 .idea
 gulpfile.js
-package.json
 package-lock.json
 yarn.lock
 

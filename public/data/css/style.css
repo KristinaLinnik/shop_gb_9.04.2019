@@ -400,11 +400,10 @@ a:hover {
             transform: rotate(360deg); }
 
 .head-card-wrap:hover .card-drop {
-  visibility: visible; }
+  display: block; }
 
 .head-card-wrap .card-drop {
-  display: block;
-  visibility: visible;
+  display: none;
   width: 250px;
   top: 32px; }
 

@@ -33,19 +33,43 @@
       "color": "WHITE",
       "size": "S",
       "price": 1500,
+      "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 5,
+      "title": "MANGO PEOPLE T-SHIRT",
+      "color": "red",
+      "size": "XS",
+      "price": 500,
       "url": "./data/img/product_4.jpg",
+      "alt": "MANGO PEOPLE T-SHIRT"
+    },
+    {
+      "id": 6,
+      "title": "MANGO PEOPLE DRESS",
+      "color": "BLACK",
+      "size": "M",
+      "price": 1000,
+      "alt": "MANGO PEOPLE DRESS"
+    },
+    {
+      "id": 7,
+      "title": "MANGO PEOPLE SKIRT",
+      "color": "WHITE",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_5.jpg",
+      "alt": "MANGO PEOPLE SKIRT"
+    },
+    {
+      "id": 8,
+      "title": "MANGO PEOPLE boot",
+      "color": "WHITE",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_6.jpg",
       "alt": "MANGO PEOPLE boot"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "title": "MANGO PEOPLE T-SHIRT",
-      "price": "500",
-      "url": "./data/img/product_1.jpg",
-      "color": "red",
-      "size": "XS",
-      "quantity": "8"
-    }
-  ]
+  "cart": []
 }

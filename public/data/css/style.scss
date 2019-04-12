@@ -143,13 +143,13 @@ a:hover {
 }
 
 .head-card-wrap:hover .card-drop {
-  //display: block;
-  visibility: visible;
+  display: block;
+  //visibility: visible;
 }
 
 .head-card-wrap .card-drop {
-  display: block;
-  visibility: visible;
+  display: none;
+  //visibility: visible;
   width: 250px;
   top: 32px;
 }
