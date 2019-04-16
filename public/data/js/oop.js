@@ -1,6 +1,53 @@
 'use strict';
 const url = '/db.json/products';
 const API_URL = "http://localhost:3000";
+
+var $thisUrl = new URL(location.href)
+var $thisUrlParams = new URLSearchParams($thisUrl.search)
+
+function fillSubcategoryList(items) {
+    var subcategoryList = document.querySelector('.subcategory-list-component');
+    if (!subcategoryList) return
+    subcategoryList.innerHTML = items.find(item => item.slug = $thisUrlParams.get('cat'))
+        .subcategories.map(item => `
+                    <li class="category-item">
+                        <a class="category-link" href="product.html?cat=${$thisUrlParams.get('cat')}&subcat=${item.slug}" data-value="action">${item.name}</a>
+                    </li>`
+        ).join('')
+
+}
+
+function fillTopMenu(items) {
+    var topNavComponent = document.querySelector('.top-nav-component');
+    if (!topNavComponent) return;
+    topNavComponent.innerHTML =
+        `<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>` +
+        items.map(item =>
+            `<li class="nav-item">
+                        <a class="nav-link" href="product.html?cat=${item.slug}">${item.name}</a>
+                        <div class="drop">
+                            <div class="drop-flex">
+                                <h3 class="drop-head">${item.name}</h3>
+                                <ul class="drop-list">
+                                    ${item.subcategories.map(subcat => `<li><a class="drop-link" href="product.html?cat=${item.slug}&subcat=${subcat.slug}">${subcat.name}</a></li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </li>`
+        ).join('')
+}
+
+fetch(`${API_URL}/category`)
+    .then(response => response.json())
+    .then((items) => {
+        fillSubcategoryList(items)
+        fillTopMenu(items)
+    })
+
+
+
+///////////////////////////////////////////////////////////////////
+
 const searchBtn = document.querySelector('.btn-search');
 const searchText = document.querySelector('#filter');
 searchBtn.addEventListener('click', (evt) => {

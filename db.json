@@ -7,7 +7,9 @@
       "size": "XS",
       "price": 500,
       "url": "./data/img/product_1.jpg",
-      "alt": "MANGO PEOPLE T-SHIRT"
+      "alt": "MANGO PEOPLE T-SHIRT",
+      "category": "man",
+      "subcategory": "skirts-shorts"
     },
     {
       "id": 2,
@@ -69,6 +71,176 @@
       "price": 1500,
       "url": "./data/img/product_6.jpg",
       "alt": "MANGO PEOPLE boot"
+    }
+  ],
+  "category": [
+    {
+      "slug": "man",
+      "name": "Man",
+      "subcategories": [
+        {
+          "slug": "dresses",
+          "name": "Dresses"
+        },
+        {
+          "slug": "tops",
+          "name": "Tops"
+        },
+        {
+          "slug": "sweaters-knits",
+          "name": "Sweaters/Knits"
+        },
+        {
+          "slug": "jackets-coats",
+          "name": "Jackets/Coats"
+        },
+        {
+          "slug": "blazers",
+          "name": "Blazers"
+        },
+        {
+          "slug": "denim",
+          "name": "Denim"
+        },
+        {
+          "slug": "leggings-pants",
+          "name": "Leggings/Pants"
+        },
+        {
+          "slug": "skirts-shorts",
+          "name": "Skirts/Shorts"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories"
+        }
+      ]
+    },
+    {
+      "slug": "woman",
+      "name": "Woman",
+      "subcategories": [
+        {
+          "slug": "dresses",
+          "name": "Dresses"
+        },
+        {
+          "slug": "tops",
+          "name": "Tops"
+        },
+        {
+          "slug": "sweaters-knits",
+          "name": "Sweaters/Knits"
+        },
+        {
+          "slug": "jackets-coats",
+          "name": "Jackets/Coats"
+        },
+        {
+          "slug": "blazers",
+          "name": "Blazers"
+        },
+        {
+          "slug": "denim",
+          "name": "Denim"
+        },
+        {
+          "slug": "leggings-pants",
+          "name": "Leggings/Pants"
+        },
+        {
+          "slug": "skirts-shorts",
+          "name": "Skirts/Shorts"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories"
+        }
+      ]
+    },
+    {
+      "slug": "kids",
+      "name": "Kids",
+      "subcategories": [
+        {
+          "slug": "dresses",
+          "name": "Dresses"
+        },
+        {
+          "slug": "tops",
+          "name": "Tops"
+        },
+        {
+          "slug": "sweaters-knits",
+          "name": "Sweaters/Knits"
+        },
+        {
+          "slug": "jackets-coats",
+          "name": "Jackets/Coats"
+        },
+        {
+          "slug": "blazers",
+          "name": "Blazers"
+        },
+        {
+          "slug": "denim",
+          "name": "Denim"
+        },
+        {
+          "slug": "leggings-pants",
+          "name": "Leggings/Pants"
+        },
+        {
+          "slug": "skirts-shorts",
+          "name": "Skirts/Shorts"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories"
+        }
+      ]
+    },
+    {
+      "slug": "accoseriese",
+      "name": "Accoseriese",
+      "subcategories": [
+        {
+          "slug": "dresses",
+          "name": "Dresses"
+        },
+        {
+          "slug": "tops",
+          "name": "Tops"
+        },
+        {
+          "slug": "sweaters-knits",
+          "name": "Sweaters/Knits"
+        },
+        {
+          "slug": "jackets-coats",
+          "name": "Jackets/Coats"
+        },
+        {
+          "slug": "blazers",
+          "name": "Blazers"
+        },
+        {
+          "slug": "denim",
+          "name": "Denim"
+        },
+        {
+          "slug": "leggings-pants",
+          "name": "Leggings/Pants"
+        },
+        {
+          "slug": "skirts-shorts",
+          "name": "Skirts/Shorts"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories"
+        }
+      ]
     }
   ],
   "cart": []
