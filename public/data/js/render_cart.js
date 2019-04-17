@@ -153,25 +153,72 @@ cartWrapper.addEventListener('click', (event) => {
 const searchBtn = document.querySelector('.btn-search');
 const searchText = document.querySelector('#filter');
 searchBtn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-        // if(event.keyCode === 13){
+        if(event.keyCode === 13){
+            evt.preventDefault();
             cart.filterItems(searchText.value);
             document.querySelector(".rows-wrap").innerHTML = cart.renderCart();
-
-        // }
-
-
-
+        }
 });
 searchText.addEventListener('keydown', (event) => {
     // event.preventDefault()
     if(event.keyCode === 13){
-        event.preventDefault()
-
+        event.preventDefault();
         cart.filterItems(event.target.value);
-
     }
     document.querySelector(".rows-wrap").innerHTML = cart.renderCart();
+
+});
+function showPopup(){
+    return `<div class="form-block_main-wrap form-bg-1">
+        <div class="form-block">
+            <a class="close-btn" href=""></a>
+
+            <form class="send-form_data">
+                <h3 class="form-head">login
+                </h3>
+                <input class="send-form_input" type="email" placeholder="please, enter your email">
+                <input class="send-form_input" type="password" placeholder="please, enter your password">
+                <button class="send-form_btn" type="submit">Send</button>
+                <p class="send-form_personal-text">If aren\`t registered, <a href="#" class="create-account">create
+                    account</a></p>
+
+            </form>
+        </div>
+    </div>`
+}
+function showPopupRegister(){
+    return `<div class="form-block_main-wrap form-bg-1">
+        <div class="form-block">
+            <a class="close-btn" href=""></a>
+
+            <form class="send-form_data">
+                <h3 class="form-head">login
+                </h3>
+                <input class="send-form_input" type="email" placeholder="please, enter your name">
+                <input class="send-form_input" type="email" placeholder="please, enter your email">
+                <input class="send-form_input" type="password" placeholder="please, enter your password">
+                <button class="send-form_btn" type="submit">Send</button>
+                <p class="send-form_personal-text">This site respects the confidentiality policy.</p>
+
+            </form>
+        </div>
+    </div>`
+
+
+}
+
+const login = document.querySelector('.account-btn ');
+login.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log('jhjhgj');
+    // const popup = showPopup();
+    document.body.innerHTML = showPopup();
+    const createAccount = document.querySelector('.create-account');
+    createAccount.addEventListener('click', (event) => {
+        event.preventDefault();
+        document.body.innerHTML = showPopupRegister();
+
+    });
 
 });
 

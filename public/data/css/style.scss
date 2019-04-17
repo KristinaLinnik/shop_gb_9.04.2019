@@ -2,6 +2,7 @@
 @import "_vars";
 @import "_keyframes";
 @import "_single-page";
+@import "_forms";
 
 * {
   margin: 0;
@@ -17,6 +18,16 @@ body, html {
 
 .hide {
   display: none;
+}
+.popup_overlay {
+  display: none;
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  opacity: 0.50;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .page-wrap {
@@ -391,6 +402,7 @@ a:hover {
   line-height: 38px;
   margin-left: 26px;
   transition: 0.4s 0.4s;
+  cursor: pointer;
   i {
     line-height: 34px;
     vertical-align: top;
