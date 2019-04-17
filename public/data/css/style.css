@@ -263,6 +263,90 @@
 .slider__control_right::before {
   background-image: url("../img/arrNext.svg"); }
 
+.form-block_main-wrap {
+  padding: 4% 8%;
+  max-width: 600px;
+  margin: 0 auto; }
+
+.no-desktop {
+  display: none; }
+
+.close-btn {
+  width: 20px;
+  height: 20px;
+  background: url(../img/delete-btn.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+
+.form-block {
+  max-width: 620px;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+  border: 1px solid #c1c1c1;
+  background-color: #fff; }
+
+.send-form_data {
+  padding: 20px;
+  color: #fff; }
+  .send-form_data .form-head {
+    color: #f16d7f;
+    font-size: 18px;
+    margin: 0 auto 10px;
+    text-align: center;
+    max-width: 370px; }
+  .send-form_data .send-form_input {
+    display: block;
+    max-width: 370px;
+    width: 96%;
+    min-width: 226px;
+    height: 36px;
+    margin: 0 auto 14px;
+    padding: 2px 12px;
+    font-weight: bold;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #c1c1c1; }
+  .send-form_data .send-form_btn {
+    display: block;
+    max-width: 370px;
+    width: 96%;
+    min-width: 226px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #f16d7f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0.8; }
+  .send-form_data .send-form_btn:hover {
+    opacity: 1; }
+  .send-form_data .send-form_personal-text {
+    text-align: center;
+    font-size: 18px;
+    max-width: 370px;
+    margin: 14px auto;
+    color: #c1c1c1; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1;
+  /* ie 6/7 */ }
+
 * {
   margin: 0;
   padding: 0;
@@ -276,6 +360,16 @@ body, html {
 
 .hide {
   display: none; }
+
+.popup_overlay {
+  display: none;
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  opacity: 0.50;
+  position: fixed;
+  top: 0;
+  width: 100%; }
 
 .page-wrap {
   display: -webkit-box;
@@ -622,7 +716,8 @@ a:hover {
   line-height: 38px;
   margin-left: 26px;
   -webkit-transition: 0.4s 0.4s;
-  transition: 0.4s 0.4s; }
+  transition: 0.4s 0.4s;
+  cursor: pointer; }
   .account-btn i {
     line-height: 34px;
     vertical-align: top; }
