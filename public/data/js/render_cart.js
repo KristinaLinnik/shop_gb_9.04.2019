@@ -118,6 +118,22 @@ class CartList {
         }
     }
 
+    clearCart(cart) {
+        console.log(this.cart);
+        for (let i = 1; i < this.cart.length; i++) {
+            let item = this.cart[i];
+            console.log(this.cart[i]);
+            fetch(`${API_URL}/cart/${item.id}`, {
+                method: 'DELETE',
+            })
+                .then(() => {
+                    this.cart = [];
+                    this.cartCatalog = [];
+                    // cart.renderCart()
+                });
+        }
+    }
+
     filterItems(value) {
         const regexp = new RegExp(value, 'i');
         this.filteredItems = this.cartCatalog.filter((item) => regexp.test(item.title));
@@ -153,23 +169,25 @@ cartWrapper.addEventListener('click', (event) => {
 const searchBtn = document.querySelector('.btn-search');
 const searchText = document.querySelector('#filter');
 searchBtn.addEventListener('click', (evt) => {
-        if(event.keyCode === 13){
-            evt.preventDefault();
-            cart.filterItems(searchText.value);
-            document.querySelector(".rows-wrap").innerHTML = cart.renderCart();
-        }
+    if (event.keyCode === 13) {
+        evt.preventDefault();
+        cart.filterItems(searchText.value);
+        document.querySelector(".rows-wrap").innerHTML = cart.renderCart();
+    }
 });
 searchText.addEventListener('keydown', (event) => {
     // event.preventDefault()
-    if(event.keyCode === 13){
+    if (event.keyCode === 13) {
         event.preventDefault();
         cart.filterItems(event.target.value);
     }
     document.querySelector(".rows-wrap").innerHTML = cart.renderCart();
 
 });
-function showPopup(){
-    return `<div class="form-block_main-wrap form-bg-1">
+
+function showPopup() {
+    return `<div class="popup_overlay" style="display: block;"></div>
+<div class="form-block_main-wrap">
         <div class="form-block">
             <a class="close-btn" href=""></a>
 
@@ -186,8 +204,10 @@ function showPopup(){
         </div>
     </div>`
 }
-function showPopupRegister(){
-    return `<div class="form-block_main-wrap form-bg-1">
+
+function showPopupRegister() {
+    return `<div class="popup_overlay" style="display: block;"></div>
+<div class="form-block_main-wrap form-bg-1">
         <div class="form-block">
             <a class="close-btn" href=""></a>
 
@@ -220,6 +240,12 @@ login.addEventListener('click', (event) => {
 
     });
 
+});
+const clearCartBtn = document.querySelector('#clearCart');
+clearCartBtn.addEventListener('click', () => {
+    console.log('ты чего творишь?');
+    cart.clearCart(this.cart);
+    // console.log(this.cart)
 });
 
 

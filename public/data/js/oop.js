@@ -38,7 +38,7 @@ class Item {
 
     render() {
         return ` <li class="shop-item">
-            <a class="shop-item-link" href = 'single-page.html' style="background-image: url(${this.url})"></a>
+            <a class="shop-item-link" href = "single-page.html" style="background-image: url(${this.url})"></a>
             <a class="add-to-card" href="#" data-id="${this.id}" data-title="${this.title}" data-price="${this.price}" data-url="${this.url}" data-color="${this.color}" data-size="${this.size}">Add to card</a>
             <a href="single-page.html" class="item-brand">${this.title}</a>
              <p class="item-price pink">${this.price}</p>
@@ -66,7 +66,10 @@ class ItemsList {
             .then(
                 (catalog) => {
                     this.catalog = catalog.map(item => new Item(item.title, item.price, item.id, item.color, item.size, item.url));
-                    this.filteredItems = this.catalog;
+                    this.filteredItems = [];
+                    for (let i = 0; i < 12; i++) {
+                        this.filteredItems.push(this.catalog[i])
+                    };
                     console.log(this.filteredItems);
                 });
     }
@@ -101,8 +104,6 @@ class ItemsList {
                     const itemIdx = this.cart.findIndex((entry) => entry.id === item.id);
                     this.cart[itemIdx].quantity = item.quantity;
                     console.log(this.cart)
-                    // this.cart.splice(itemIdx, 1);
-                    // this.cart.push(item);
                 });
         } else {
             fetch('/cart', {
@@ -132,10 +133,11 @@ list.fetchItems().then(
     }
 );
 $catalogWrap.addEventListener('click', (event) => {
-        event.preventDefault();
         if (event.target.classList.contains('add-to-card')) {
-            let data= event.target.dataset;
-            list.addToCart(data)
+            event.preventDefault();
+            let data = event.target.dataset;
+            list.addToCart(data);
+            // alert('this good added to cart!')
 
 
         }
@@ -152,9 +154,6 @@ $catalogWrap.addEventListener('click', (event) => {
 //
 //     });
 // }
-
-
-
 
 
 //отрисовка корзины

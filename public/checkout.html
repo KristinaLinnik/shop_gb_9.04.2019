@@ -66,7 +66,7 @@
                     </div>
                     <div class="right-head">
                         <div class="head-card-wrap">
-                            <a href="shopping-card.html" class="card-wrap-btn"><img src="data/img/card.svg" alt="card"></a>
+                            <a href="shopping-cart.html" class="card-wrap-btn"><img src="data/img/card.svg" alt="card"></a>
                             <div class="drop card-drop">
                                 <div class="drop-flex-card">
                                     <div class="drop-img"
@@ -115,7 +115,7 @@
                                     <span class="total-sum">$500</span>
                                 </p>
                                 <a href="checkout.html" class="checkout">Checkout</a>
-                                <a href="shopping-card.html" class="go-to-card-btn">Go to cart</a>
+                                <a href="shopping-cart.html" class="go-to-card-btn">Go to cart</a>
                             </div>
                         </div>
 
@@ -631,42 +631,24 @@
         <script type="text/javascript" src="data/js/main.js"></script>
         <script>
             if (document.querySelector('#accordionCustom')) {
-                var accordion = document.querySelector('#accordionCustom');
-                var accordBlocks = accordion.querySelectorAll('.accord-block');
+                let accordion = document.querySelector('#accordionCustom');
+                let accordBlocks = accordion.querySelectorAll('.accord-block');
 
-                var accordionBtn = accordion.querySelectorAll('.btn-link');
-                for (var i = 0; i < accordionBtn.length; i++) {
-                    var itemBtn = accordionBtn[i];
+                let accordionBtn = accordion.querySelectorAll('.btn-link');
+                for (let i = 0; i < accordionBtn.length; i++) {
+                    let itemBtn = accordionBtn[i];
                     itemBtn.id = [i];
                 }
-//
-//
-//     }
-//     return (itemBtn)
-//
-//
-// };
-// var findAccordBlock = function () {
-//     var accordBlock;
-//     for (var j = 0; j < accordBlocks.length - 1; j++) {
-//         accordBlock = accordBlocks[j];
-//         accordBlock.id = [j];
-//
-//
-//     }
-//     return (accordBlock)
-//
-// };
 
                 accordion.addEventListener('click', handleCollapse);
 
 
                 function handleCollapse(event) {
                     if (event.target.tagName === 'BUTTON') {
-                        var btn = event.target;
+                        let btn = event.target;
 
-                        for (var i = 0; i < accordBlocks.length; i++) {
-                            var accordBlock = accordBlocks[i];
+                        for (let i = 0; i < accordBlocks.length; i++) {
+                            let accordBlock = accordBlocks[i];
                             accordBlock.id = i;
                             if (accordBlock.id === btn.id) {
                                 if (accordBlock.classList.contains('collapse')) {
