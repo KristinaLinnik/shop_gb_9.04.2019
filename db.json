@@ -2,18 +2,16 @@
   "products": [
     {
       "id": 1,
-      "title": "MANGO PEOPLE T-SHIRT",
+      "title": "Timberland PEOPLE T-SHIRT",
       "color": "red",
       "size": "XS",
       "price": 500,
       "url": "./data/img/product_1.jpg",
-      "alt": "MANGO PEOPLE T-SHIRT",
-      "category": "man",
-      "subcategory": "skirts-shorts"
+      "alt": "MANGO PEOPLE T-SHIRT"
     },
     {
       "id": 2,
-      "title": "MANGO PEOPLE DRESS",
+      "title": "Timberland PEOPLE DRESS",
       "color": "BLACK",
       "size": "M",
       "price": 1000,
@@ -22,7 +20,7 @@
     },
     {
       "id": 3,
-      "title": "MANGO PEOPLE SKIRT",
+      "title": "Timberland PEOPLE SKIRT",
       "color": "WHITE",
       "size": "S",
       "price": 1500,
@@ -31,7 +29,7 @@
     },
     {
       "id": 4,
-      "title": "MANGO PEOPLE boot",
+      "title": "Terranova PEOPLE boot",
       "color": "WHITE",
       "size": "S",
       "price": 1500,
@@ -39,7 +37,7 @@
     },
     {
       "id": 5,
-      "title": "MANGO PEOPLE T-SHIRT",
+      "title": "Terranova PEOPLE T-SHIRT",
       "color": "red",
       "size": "XS",
       "price": 500,
@@ -48,7 +46,7 @@
     },
     {
       "id": 6,
-      "title": "MANGO PEOPLE DRESS",
+      "title": "Terranova PEOPLE DRESS",
       "color": "BLACK",
       "size": "M",
       "price": 1000,
@@ -56,7 +54,7 @@
     },
     {
       "id": 7,
-      "title": "MANGO PEOPLE SKIRT",
+      "title": "Terranova PEOPLE SKIRT",
       "color": "WHITE",
       "size": "S",
       "price": 1500,
@@ -71,177 +69,123 @@
       "price": 1500,
       "url": "./data/img/product_6.jpg",
       "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 9,
+      "title": "OVS PEOPLE boot",
+      "color": "orange",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_7.jpg",
+      "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 10,
+      "title": "MANGO PEOPLE boot",
+      "color": "blue",
+      "size": "xxl",
+      "price": 1900,
+      "url": "./data/img/product_8.jpg",
+      "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 11,
+      "title": "OVS PEOPLE T-SHIRT",
+      "color": "red",
+      "size": "XS",
+      "price": 500,
+      "url": "./data/img/product_1.jpg",
+      "alt": "MANGO PEOPLE T-SHIRT"
+    },
+    {
+      "id": 12,
+      "title": "MANGO PEOPLE DRESS",
+      "color": "BLACK",
+      "size": "M",
+      "price": 1000,
+      "url": "./data/img/product_2.jpg",
+      "alt": "MANGO PEOPLE DRESS"
+    },
+    {
+      "id": 13,
+      "title": "MANGO PEOPLE SKIRT",
+      "color": "WHITE",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_3.jpg",
+      "alt": "MANGO PEOPLE SKIRT"
+    },
+    {
+      "id": 14,
+      "title": "MANGO PEOPLE boot",
+      "color": "WHITE",
+      "size": "S",
+      "price": 1500,
+      "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 15,
+      "title": "OVS PEOPLE T-SHIRT",
+      "color": "red",
+      "size": "XS",
+      "price": 500,
+      "url": "./data/img/product_4.jpg",
+      "alt": "MANGO PEOPLE T-SHIRT"
+    },
+    {
+      "id": 16,
+      "title": "MANGO PEOPLE DRESS",
+      "color": "BLACK",
+      "size": "M",
+      "price": 1000,
+      "alt": "MANGO PEOPLE DRESS"
+    },
+    {
+      "id": 17,
+      "title": "OVS PEOPLE SKIRT",
+      "color": "WHITE",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_5.jpg",
+      "alt": "MANGO PEOPLE SKIRT"
+    },
+    {
+      "id": 18,
+      "title": "MANGO PEOPLE boot",
+      "color": "WHITE",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_6.jpg",
+      "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 19,
+      "title": "MANGO PEOPLE boot",
+      "color": "orange",
+      "size": "S",
+      "price": 1500,
+      "url": "./data/img/product_7.jpg",
+      "alt": "MANGO PEOPLE boot"
+    },
+    {
+      "id": 20,
+      "title": "MANGO PEOPLE boot",
+      "color": "blue",
+      "size": "xxl",
+      "price": 1900,
+      "url": "./data/img/product_8.jpg",
+      "alt": "MANGO PEOPLE boot"
     }
   ],
-  "category": [
+  "cart": [
     {
-      "slug": "man",
-      "name": "Man",
-      "subcategories": [
-        {
-          "slug": "dresses",
-          "name": "Dresses"
-        },
-        {
-          "slug": "tops",
-          "name": "Tops"
-        },
-        {
-          "slug": "sweaters-knits",
-          "name": "Sweaters/Knits"
-        },
-        {
-          "slug": "jackets-coats",
-          "name": "Jackets/Coats"
-        },
-        {
-          "slug": "blazers",
-          "name": "Blazers"
-        },
-        {
-          "slug": "denim",
-          "name": "Denim"
-        },
-        {
-          "slug": "leggings-pants",
-          "name": "Leggings/Pants"
-        },
-        {
-          "slug": "skirts-shorts",
-          "name": "Skirts/Shorts"
-        },
-        {
-          "slug": "accessories",
-          "name": "Accessories"
-        }
-      ]
-    },
-    {
-      "slug": "woman",
-      "name": "Woman",
-      "subcategories": [
-        {
-          "slug": "dresses",
-          "name": "Dresses"
-        },
-        {
-          "slug": "tops",
-          "name": "Tops"
-        },
-        {
-          "slug": "sweaters-knits",
-          "name": "Sweaters/Knits"
-        },
-        {
-          "slug": "jackets-coats",
-          "name": "Jackets/Coats"
-        },
-        {
-          "slug": "blazers",
-          "name": "Blazers"
-        },
-        {
-          "slug": "denim",
-          "name": "Denim"
-        },
-        {
-          "slug": "leggings-pants",
-          "name": "Leggings/Pants"
-        },
-        {
-          "slug": "skirts-shorts",
-          "name": "Skirts/Shorts"
-        },
-        {
-          "slug": "accessories",
-          "name": "Accessories"
-        }
-      ]
-    },
-    {
-      "slug": "kids",
-      "name": "Kids",
-      "subcategories": [
-        {
-          "slug": "dresses",
-          "name": "Dresses"
-        },
-        {
-          "slug": "tops",
-          "name": "Tops"
-        },
-        {
-          "slug": "sweaters-knits",
-          "name": "Sweaters/Knits"
-        },
-        {
-          "slug": "jackets-coats",
-          "name": "Jackets/Coats"
-        },
-        {
-          "slug": "blazers",
-          "name": "Blazers"
-        },
-        {
-          "slug": "denim",
-          "name": "Denim"
-        },
-        {
-          "slug": "leggings-pants",
-          "name": "Leggings/Pants"
-        },
-        {
-          "slug": "skirts-shorts",
-          "name": "Skirts/Shorts"
-        },
-        {
-          "slug": "accessories",
-          "name": "Accessories"
-        }
-      ]
-    },
-    {
-      "slug": "accoseriese",
-      "name": "Accoseriese",
-      "subcategories": [
-        {
-          "slug": "dresses",
-          "name": "Dresses"
-        },
-        {
-          "slug": "tops",
-          "name": "Tops"
-        },
-        {
-          "slug": "sweaters-knits",
-          "name": "Sweaters/Knits"
-        },
-        {
-          "slug": "jackets-coats",
-          "name": "Jackets/Coats"
-        },
-        {
-          "slug": "blazers",
-          "name": "Blazers"
-        },
-        {
-          "slug": "denim",
-          "name": "Denim"
-        },
-        {
-          "slug": "leggings-pants",
-          "name": "Leggings/Pants"
-        },
-        {
-          "slug": "skirts-shorts",
-          "name": "Skirts/Shorts"
-        },
-        {
-          "slug": "accessories",
-          "name": "Accessories"
-        }
-      ]
+      "id": "4",
+      "title": "Terranova PEOPLE boot",
+      "price": "1500",
+      "url": "./data/img/no-image-icon.png",
+      "color": "WHITE",
+      "size": "S",
+      "quantity": 1
     }
-  ],
-  "cart": []
+  ]
 }

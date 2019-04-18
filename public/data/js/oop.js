@@ -1,53 +1,6 @@
 'use strict';
 const url = '/db.json/products';
 const API_URL = "http://localhost:3000";
-
-var $thisUrl = new URL(location.href)
-var $thisUrlParams = new URLSearchParams($thisUrl.search)
-
-function fillSubcategoryList(items) {
-    var subcategoryList = document.querySelector('.subcategory-list-component');
-    if (!subcategoryList) return
-    subcategoryList.innerHTML = items.find(item => item.slug = $thisUrlParams.get('cat'))
-        .subcategories.map(item => `
-                    <li class="category-item">
-                        <a class="category-link" href="product.html?cat=${$thisUrlParams.get('cat')}&subcat=${item.slug}" data-value="action">${item.name}</a>
-                    </li>`
-        ).join('')
-
-}
-
-function fillTopMenu(items) {
-    var topNavComponent = document.querySelector('.top-nav-component');
-    if (!topNavComponent) return;
-    topNavComponent.innerHTML =
-        `<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>` +
-        items.map(item =>
-            `<li class="nav-item">
-                        <a class="nav-link" href="product.html?cat=${item.slug}">${item.name}</a>
-                        <div class="drop">
-                            <div class="drop-flex">
-                                <h3 class="drop-head">${item.name}</h3>
-                                <ul class="drop-list">
-                                    ${item.subcategories.map(subcat => `<li><a class="drop-link" href="product.html?cat=${item.slug}&subcat=${subcat.slug}">${subcat.name}</a></li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                    </li>`
-        ).join('')
-}
-
-fetch(`${API_URL}/category`)
-    .then(response => response.json())
-    .then((items) => {
-        fillSubcategoryList(items)
-        fillTopMenu(items)
-    })
-
-
-
-///////////////////////////////////////////////////////////////////
-
 const searchBtn = document.querySelector('.btn-search');
 const searchText = document.querySelector('#filter');
 searchBtn.addEventListener('click', (evt) => {
@@ -85,7 +38,7 @@ class Item {
 
     render() {
         return ` <li class="shop-item">
-            <a class="shop-item-link" href = 'single-page.html' style="background-image: url(${this.url})"></a>
+            <a class="shop-item-link" href = "single-page.html" style="background-image: url(${this.url})"></a>
             <a class="add-to-card" href="#" data-id="${this.id}" data-title="${this.title}" data-price="${this.price}" data-url="${this.url}" data-color="${this.color}" data-size="${this.size}">Add to card</a>
             <a href="single-page.html" class="item-brand">${this.title}</a>
              <p class="item-price pink">${this.price}</p>
@@ -113,7 +66,10 @@ class ItemsList {
             .then(
                 (catalog) => {
                     this.catalog = catalog.map(item => new Item(item.title, item.price, item.id, item.color, item.size, item.url));
-                    this.filteredItems = this.catalog;
+                    this.filteredItems = [];
+                    for (let i = 0; i < 12; i++) {
+                        this.filteredItems.push(this.catalog[i])
+                    };
                     console.log(this.filteredItems);
                 });
     }
@@ -148,8 +104,6 @@ class ItemsList {
                     const itemIdx = this.cart.findIndex((entry) => entry.id === item.id);
                     this.cart[itemIdx].quantity = item.quantity;
                     console.log(this.cart)
-                    // this.cart.splice(itemIdx, 1);
-                    // this.cart.push(item);
                 });
         } else {
             fetch('/cart', {
@@ -179,10 +133,11 @@ list.fetchItems().then(
     }
 );
 $catalogWrap.addEventListener('click', (event) => {
-        event.preventDefault();
         if (event.target.classList.contains('add-to-card')) {
-            let data= event.target.dataset;
-            list.addToCart(data)
+            event.preventDefault();
+            let data = event.target.dataset;
+            list.addToCart(data);
+            // alert('this good added to cart!')
 
 
         }
@@ -199,9 +154,6 @@ $catalogWrap.addEventListener('click', (event) => {
 //
 //     });
 // }
-
-
-
 
 
 //отрисовка корзины

@@ -1,0 +1,100 @@
+.form-block_main-wrap {
+  padding: 4% 8%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.no-desktop {
+  display: none;
+}
+.close-btn {
+  width: 20px;
+  height: 20px;
+  background: url(../img/delete-btn.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.form-block {
+  max-width: 620px;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+  border: 1px solid #c1c1c1;
+  background-color: #fff;
+
+
+}
+
+.send-form_data {
+  padding: 20px;
+  color: #fff;
+  .form-head {
+    color: #f16d7f;
+    font-size: 18px;
+    margin: 0 auto 10px;
+    text-align: center;
+    max-width: 370px;
+  }
+  .send-form_input {
+    display: block;
+    max-width: 370px;
+    width: 96%;
+    min-width: 226px;
+    height: 36px;
+    margin: 0 auto 14px;
+    //margin-bottom: 8px;
+    padding: 2px 12px;
+    font-weight: bold;
+    //border: none;
+    box-sizing: border-box;
+    border: 1px solid #c1c1c1;
+
+  }
+
+  .send-form_btn {
+    display: block;
+    max-width: 370px;
+    width: 96%;
+    min-width: 226px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #f16d7f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0.8;
+  }
+  .send-form_btn:hover {
+    opacity: 1;
+  }
+  .send-form_personal-text {
+    text-align: center;
+    font-size: 18px;
+    max-width: 370px;
+    margin: 14px auto;
+    color: #c1c1c1;
+
+  }
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
