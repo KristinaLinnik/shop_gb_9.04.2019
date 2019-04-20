@@ -14,13 +14,12 @@ function changeUrlParam(name, val) {
 function fillSubcategoryList(items) {
     var subcategoryList = document.querySelector('.subcategory-list-component');
     if (!subcategoryList) return
-    subcategoryList.innerHTML = items.find(item => item.slug = $thisUrlParams.get('cat'))
+    subcategoryList.innerHTML = items.find(item => item.slug == $thisUrlParams.get('cat'))
         .subcategories.map(item => `
                     <li class="category-item">
                         <a class="category-link" href="#" onclick="return changeUrlParam('subcat', '${item.slug}')" data-value="action">${item.name}</a>
                     </li>`
         ).join('')
-
 }
 
 function fillTopMenu(items) {
@@ -30,12 +29,12 @@ function fillTopMenu(items) {
         `<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>` +
         items.map(item =>
             `<li class="nav-item">
-                        <a class="nav-link" href="product.html?cat=${item.slug}">${item.name}</a>
+                        <a class="nav-link" href="product.html?cat=${item.slug}&_page=1&_limit=12">${item.name}</a>
                         <div class="drop">
                             <div class="drop-flex">
                                 <h3 class="drop-head">${item.name}</h3>
                                 <ul class="drop-list">
-                                    ${item.subcategories.map(subcat => `<li><a class="drop-link" href="product.html?cat=${item.slug}&subcat=${subcat.slug}">${subcat.name}</a></li>`).join('')}
+                                    ${item.subcategories.map(subcat => `<li><a class="drop-link" href="product.html?cat=${item.slug}&subcat=${subcat.slug}&_page=1&_limit=12">${subcat.name}</a></li>`).join('')}
                                 </ul>
                             </div>
                         </div>
@@ -109,6 +108,9 @@ class ItemsList {
         if(!$thisUrlParams.get('_page')) {
             changeUrlParam('_page', 1)
         }
+        if(!$thisUrlParams.get('cat')) {
+            changeUrlParam('cat', 'woman')
+        }
     }
 
     fetchCart() {
@@ -120,7 +122,14 @@ class ItemsList {
     }
 
     fetchItems() {
-        return fetch(`${API_URL}/products?_page=${$thisUrlParams.get('_page')}&_limit=${this.itemsPerPage}`)
+        var url = `${API_URL}/products?_page=${$thisUrlParams.get('_page')}&_limit=${this.itemsPerPage}`;
+        if($thisUrlParams.get('cat')) {
+            url = url + '&category=' + $thisUrlParams.get('cat')
+        }
+        if($thisUrlParams.get('subcat')) {
+            url = url + '&subcategory=' + $thisUrlParams.get('subcat')
+        }
+        return fetch(url)
             .then((response) => {
                 this.totalItemCount = response.headers.get('X-Total-Count');
                 return response.json()

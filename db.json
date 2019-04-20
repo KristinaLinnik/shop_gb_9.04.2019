@@ -1,8 +1,8 @@
 {
   "category": [
     {
-      "slug": "man",
-      "name": "Man",
+      "slug": "woman",
+      "name": "Woman",
       "subcategories": [
         {
           "slug": "dresses",
@@ -43,8 +43,8 @@
       ]
     },
     {
-      "slug": "woman",
-      "name": "Woman",
+      "slug": "man",
+      "name": "Man",
       "subcategories": [
         {
           "slug": "dresses",
@@ -177,7 +177,9 @@
       "size": "XS",
       "price": 500,
       "url": "./data/img/product_1.jpg",
-      "alt": "MANGO PEOPLE T-SHIRT"
+      "alt": "MANGO PEOPLE T-SHIRT",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 2,
@@ -186,7 +188,9 @@
       "size": "M",
       "price": 1000,
       "url": "./data/img/product_2.jpg",
-      "alt": "MANGO PEOPLE DRESS"
+      "alt": "MANGO PEOPLE DRESS",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 3,
@@ -195,7 +199,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_3.jpg",
-      "alt": "MANGO PEOPLE SKIRT"
+      "alt": "MANGO PEOPLE SKIRT",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 4,
@@ -203,7 +209,9 @@
       "color": "WHITE",
       "size": "S",
       "price": 1500,
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 5,
@@ -212,7 +220,9 @@
       "size": "XS",
       "price": 500,
       "url": "./data/img/product_4.jpg",
-      "alt": "MANGO PEOPLE T-SHIRT"
+      "alt": "MANGO PEOPLE T-SHIRT",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 6,
@@ -220,7 +230,9 @@
       "color": "BLACK",
       "size": "M",
       "price": 1000,
-      "alt": "MANGO PEOPLE DRESS"
+      "alt": "MANGO PEOPLE DRESS",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 7,
@@ -229,7 +241,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_5.jpg",
-      "alt": "MANGO PEOPLE SKIRT"
+      "alt": "MANGO PEOPLE SKIRT",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 8,
@@ -238,7 +252,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_6.jpg",
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 9,
@@ -247,7 +263,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_7.jpg",
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 10,
@@ -256,7 +274,9 @@
       "size": "xxl",
       "price": 1900,
       "url": "./data/img/product_8.jpg",
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 11,
@@ -265,7 +285,9 @@
       "size": "XS",
       "price": 500,
       "url": "./data/img/product_1.jpg",
-      "alt": "MANGO PEOPLE T-SHIRT"
+      "alt": "MANGO PEOPLE T-SHIRT",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 12,
@@ -274,7 +296,9 @@
       "size": "M",
       "price": 1000,
       "url": "./data/img/product_2.jpg",
-      "alt": "MANGO PEOPLE DRESS"
+      "alt": "MANGO PEOPLE DRESS",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 13,
@@ -283,7 +307,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_3.jpg",
-      "alt": "MANGO PEOPLE SKIRT"
+      "alt": "MANGO PEOPLE SKIRT",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 14,
@@ -291,7 +317,9 @@
       "color": "WHITE",
       "size": "S",
       "price": 1500,
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 15,
@@ -300,7 +328,9 @@
       "size": "XS",
       "price": 500,
       "url": "./data/img/product_4.jpg",
-      "alt": "MANGO PEOPLE T-SHIRT"
+      "alt": "MANGO PEOPLE T-SHIRT",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 16,
@@ -308,7 +338,9 @@
       "color": "BLACK",
       "size": "M",
       "price": 1000,
-      "alt": "MANGO PEOPLE DRESS"
+      "alt": "MANGO PEOPLE DRESS",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 17,
@@ -317,7 +349,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_5.jpg",
-      "alt": "MANGO PEOPLE SKIRT"
+      "alt": "MANGO PEOPLE SKIRT",
+      "category": "woman",
+      "subcategory": "tops"
     },
     {
       "id": 18,
@@ -326,7 +360,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_6.jpg",
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 19,
@@ -335,7 +371,9 @@
       "size": "S",
       "price": 1500,
       "url": "./data/img/product_7.jpg",
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "man",
+      "subcategory": "tops"
     },
     {
       "id": 20,
@@ -344,7 +382,9 @@
       "size": "xxl",
       "price": 1900,
       "url": "./data/img/product_8.jpg",
-      "alt": "MANGO PEOPLE boot"
+      "alt": "MANGO PEOPLE boot",
+      "category": "man",
+      "subcategory": "tops"
     }
   ],
   "cart": [
