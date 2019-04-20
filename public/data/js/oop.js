@@ -5,13 +5,19 @@ const API_URL = "http://localhost:3000";
 var $thisUrl = new URL(location.href)
 var $thisUrlParams = new URLSearchParams($thisUrl.search)
 
+function changeUrlParam(name, val) {
+    $thisUrlParams.set(name, val);
+    location.search = $thisUrlParams;
+    return false;
+}
+
 function fillSubcategoryList(items) {
     var subcategoryList = document.querySelector('.subcategory-list-component');
     if (!subcategoryList) return
     subcategoryList.innerHTML = items.find(item => item.slug = $thisUrlParams.get('cat'))
         .subcategories.map(item => `
                     <li class="category-item">
-                        <a class="category-link" href="product.html?cat=${$thisUrlParams.get('cat')}&subcat=${item.slug}" data-value="action">${item.name}</a>
+                        <a class="category-link" href="#" onclick="return changeUrlParam('subcat', '${item.slug}')" data-value="action">${item.name}</a>
                     </li>`
         ).join('')
 
@@ -91,9 +97,18 @@ class Item {
 
 //отрисовка каталога
 class ItemsList {
+    totalItemCount = null;
+    itemsPerPage = 12;
+
     constructor() {
         this.catalog = [];
         this.cart = [];
+        if($thisUrlParams.get('_limit') != this.itemsPerPage) {
+            changeUrlParam('_limit', this.itemsPerPage)
+        }
+        if(!$thisUrlParams.get('_page')) {
+            changeUrlParam('_page', 1)
+        }
     }
 
     fetchCart() {
@@ -105,19 +120,43 @@ class ItemsList {
     }
 
     fetchItems() {
-        return sendRequest(`${API_URL}/products`)
+        return fetch(`${API_URL}/products?_page=${$thisUrlParams.get('_page')}&_limit=${this.itemsPerPage}`)
+            .then((response) => {
+                this.totalItemCount = response.headers.get('X-Total-Count');
+                return response.json()
+            })
             .then(
                 (catalog) => {
+                    console.log(catalog)
                     this.catalog = catalog.map(item => new Item(item.title, item.price, item.id, item.color, item.size, item.url));
                     this.filteredItems = [];
-                    for (let i = 0; i < 12; i++) {
+                    for (let i = 0; i < this.catalog.length; i++) {
                         this.filteredItems.push(this.catalog[i])
                     };
                     console.log(this.filteredItems);
                 });
     }
 
+    renderPageNavigator() {
+        var pageCount = Math.ceil(this.totalItemCount / this.itemsPerPage);
+        document.getElementsByClassName('page-navigator-component')[0].innerHTML = `
+                        <li class="page-item">
+                            <a class="page-link ${$thisUrlParams.get('_page') != 1 ? 'active' : ''}" href="#" onclick="return changeUrlParam('_page', parseInt($thisUrlParams.get('_page')) - 1)">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        ${[...Array(pageCount).keys()].map(i => `
+                            <li class="page-item"><a class="page-link ${$thisUrlParams.get('_page') != i + 1 ? 'active' : ''}" href="#" onclick="return changeUrlParam('_page', '${i + 1}')">${i + 1}</a></li>
+                        `).join('')}
+                        <li class="page-item">
+                            <a class="page-link ${$thisUrlParams.get('_page') != 1 ? pageCount : ''}" href="#" onclick="return changeUrlParam('_page', parseInt($thisUrlParams.get('_page')) + 1)">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+                        </li>`
+    }
+
     render() {
+        this.renderPageNavigator()
         let itemsHtmls = this.filteredItems.map(Item => Item.render());
         return itemsHtmls.join("");
 
